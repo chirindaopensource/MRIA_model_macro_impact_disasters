@@ -1,0 +1,153 @@
+﻿# ==============================================================================
+# Requirements File for Multi-Regional Impact Assessment (MRIA) Model
+# Implementation of Perumal et al. (2025) Economic Resilience Framework
+# ==============================================================================
+#
+# This requirements file provides a complete specification of all dependencies
+# required for a production-grade implementation of the MRIA model for assessing
+# macroeconomic impacts of disasters through multi-regional, multi-sectoral
+# supply-use economic modeling with three-step linear programming optimization.
+#
+# Installation: pip install -r requirements.txt
+# Python Version Requirement: >=3.9,<4.0
+#
+# ==============================================================================
+
+# --- Core Numerical Computing Stack ---
+# NumPy: Fundamental package for scientific computing with N-dimensional arrays
+# Required for: Matrix operations, coefficient matrix construction, vectorized calculations
+numpy>=1.24.0,<2.0.0
+
+# Pandas: Data manipulation and analysis library with DataFrame structures  
+# Required for: SUT data handling, regional filtering, time series operations
+pandas>=2.0.0,<3.0.0
+
+# --- Mathematical Optimization Engine ---
+# Gurobi: High-performance mathematical optimization solver
+# Required for: Linear programming formulation, three-step optimization algorithm
+# Note: Requires separate Gurobi license (academic licenses available)
+gurobipy>=11.0.0,<12.0.0
+
+# --- Statistical Analysis and Scientific Computing ---
+# SciPy: Scientific computing library with statistical functions
+# Required for: Spearman correlation analysis, statistical testing, matrix operations
+scipy>=1.10.0,<2.0.0
+
+# --- Progress Monitoring and User Interface ---
+# tqdm: Progress bar library for long-running computations
+# Required for: Monte Carlo simulations, sensitivity analysis iterations
+tqdm>=4.65.0,<5.0.0
+
+# --- Geospatial Data Processing (for Figure 2 choropleth maps) ---
+# GeoPandas: Extends pandas for geospatial data operations
+# Required for: NUTS-2 shapefile handling, choropleth map generation
+geopandas>=0.13.0,<1.0.0
+
+# Shapely: Geometric objects manipulation library (GeoPandas dependency)
+# Required for: Spatial data operations, polygon handling
+shapely>=2.0.0,<3.0.0
+
+# Fiona: File I/O for geospatial data formats (GeoPandas dependency)
+# Required for: Reading shapefiles and other geospatial formats
+fiona>=1.9.0,<2.0.0
+
+# --- Data Visualization and Plotting ---
+# Matplotlib: Comprehensive 2D plotting library
+# Required for: Multi-panel figures, log-log plots, scientific visualization
+matplotlib>=3.7.0,<4.0.0
+
+# Seaborn: Statistical data visualization based on matplotlib
+# Required for: Enhanced statistical plots, heatmaps, correlation matrices
+seaborn>=0.12.0,<1.0.0
+
+# --- File I/O and Data Serialization ---
+# openpyxl: Library for reading/writing Excel 2010 xlsx/xlsm files
+# Required for: Excel-based SUT data import/export
+openpyxl>=3.1.0,<4.0.0
+
+# xlrd: Library for reading Excel files (.xls format)
+# Required for: Legacy Excel format support for SUT data
+xlrd>=2.0.0,<3.0.0
+
+# --- Development and Code Quality Tools ---
+# MyPy: Static type checker for Python
+# Required for: Type hint validation, code quality assurance
+mypy>=1.5.0,<2.0.0
+
+# Black: Code formatter for consistent Python style
+# Required for: PEP-8 compliant code formatting
+black>=23.0.0,<24.0.0
+
+# Flake8: Linting tool for style guide enforcement
+# Required for: Code quality checks, PEP-8 compliance
+flake8>=6.0.0,<7.0.0
+
+# isort: Import sorting utility
+# Required for: Consistent import organization
+isort>=5.12.0,<6.0.0
+
+# --- Testing Framework ---
+# pytest: Testing framework for Python applications
+# Required for: Unit testing, integration testing, model validation
+pytest>=7.4.0,<8.0.0
+
+# pytest-cov: Coverage plugin for pytest
+# Required for: Test coverage analysis
+pytest-cov>=4.1.0,<5.0.0
+
+# --- Documentation Generation ---
+# Sphinx: Documentation generator
+# Required for: API documentation, technical documentation
+sphinx>=7.0.0,<8.0.0
+
+# sphinx-rtd-theme: Read the Docs theme for Sphinx
+# Required for: Professional documentation styling
+sphinx-rtd-theme>=1.3.0,<2.0.0
+
+# --- Memory Profiling and Performance Monitoring ---
+# memory-profiler: Monitor memory usage of Python programs
+# Required for: Large-scale model performance optimization
+memory-profiler>=0.61.0,<1.0.0
+
+# psutil: Cross-platform system and process utilities
+# Required for: System resource monitoring during computations
+psutil>=5.9.0,<6.0.0
+
+# --- Parallel Processing Enhancement ---
+# joblib: Lightweight pipelining for parallel computing
+# Required for: Efficient parallelization of Monte Carlo simulations
+joblib>=1.3.0,<2.0.0
+
+# --- Configuration Management ---
+# PyYAML: YAML parser and emitter for Python
+# Required for: Configuration file management, model parameterization
+PyYAML>=6.0,<7.0
+
+# --- Logging and Monitoring ---
+# structlog: Structured logging for Python
+# Required for: Comprehensive logging of model execution, debugging
+structlog>=23.1.0,<24.0.0
+
+# --- Additional Utilities ---
+# requests: HTTP library for Python
+# Required for: Data downloading, API interactions
+requests>=2.31.0,<3.0.0
+
+# pathlib: Object-oriented filesystem paths (included in Python 3.4+)
+# Note: Built-in module, no external dependency required
+
+# --- Optional: Enhanced Performance (Uncomment if needed) ---
+# numba: JIT compiler for numerical functions
+# Required for: Accelerated numerical computations (optional optimization)
+# numba>=0.57.0,<1.0.0
+
+# --- Development Dependencies (Optional) ---
+# Jupyter: Interactive computing environment
+# Required for: Exploratory data analysis, model development
+jupyter>=1.0.0,<2.0.0
+
+# ipykernel: IPython kernel for Jupyter
+# Required for: Jupyter notebook support
+ipykernel>=6.25.0,<7.0.0
+
+# --- End of Requirements ---
